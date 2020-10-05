@@ -1,0 +1,20 @@
+{
+    "manifest_version": 2,
+    "name": "HNReduce",
+    "version": "1.1",
+    
+    "description": "Makes comments for HN post visible after reading the article",
+    "icons": {
+        "32":"icons/32.png"
+    },
+    "content_scripts":[
+        {
+            "matches":["*://*.ycombinator.com/*"],
+            "js":["hnfix.js"],
+			"css":["hnfix.css"]
+        }
+    ],
+    "permissions":[
+	"storage"
+    ]
+}
